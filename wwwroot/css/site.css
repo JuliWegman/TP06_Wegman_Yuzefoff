@@ -12,10 +12,43 @@ html {
 
 body {
   margin: 20px 60px 0px 20px;
+  font-family: 'Roboto Slab', serif;
 }
 
 footer {
   position: fixed; 
   bottom: 0; 
   margin: 10px 0px 20px 0px;
+}
+nav{
+  background-color: #CCE3DE;
+  width: 100%;
+  margin: 0;
+}
+nav ul{
+  margin: 0;
+  list-style: none;
+}
+nav ul a li{
+  margin: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  float: left;
+  width: 33%;
+  text-align: center;
+  background-color: #CCE3DE;
+  color: #6B9080;
+transition: 0.7s;
+text-decoration: none;
+}
+
+nav a li:hover{
+  background-color: #DBECE9;
+  cursor: pointer;
+}
+nav ul li{
+  background-color: #CCE3DE;
+  float: left;
+  width: 10%;
+  padding: 0;
 }

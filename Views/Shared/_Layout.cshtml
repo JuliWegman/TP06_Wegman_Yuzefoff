@@ -8,14 +8,19 @@
     </head>
     <body>
         <header style="position:fixed; top: 0; margin: 10px 0px 20px 0px;">
-            Encabezado TP XX
         </header>
         <div style="padding:20px 10px 0px 10px;">
             @RenderBody()
         </div>
-
+        <nav class="navegador2">
+            <ul>
+                <a href="#"><li>Inicio</li></a> 
+                <a href="#"><li>Curiosidades</li></a>
+                <a href="#"><li>Discografia</li></a>
+            </ul>
+        </nav>
         <footer>
-                &copy; @DateTime.Now.Year - Taller de Programación - TPXX
+                &copy; @DateTime.Now.Year - Taller de Programación - TP06
         </footer>
         <script src="~/js/site.js" asp-append-version="true"></script>
         @await RenderSectionAsync("Scripts", required: false)
