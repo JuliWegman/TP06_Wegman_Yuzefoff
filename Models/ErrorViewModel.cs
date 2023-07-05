@@ -1,4 +1,4 @@
-namespace TP 06 - Elecciones.Models;
+namespace TP06.Models;
 
 public class ErrorViewModel
 {

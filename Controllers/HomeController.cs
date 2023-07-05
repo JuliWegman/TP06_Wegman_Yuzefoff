@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace TP 06 - Elecciones.Controllers;
+namespace TP06.Controllers;
 
 public class HomeController : Controller
 {
