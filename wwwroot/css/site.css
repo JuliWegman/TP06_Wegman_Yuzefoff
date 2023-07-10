@@ -24,31 +24,29 @@ nav{
   background-color: #CCE3DE;
   width: 100%;
   margin: 0;
+  padding: 1.5%;
 }
 nav ul{
   margin: 0;
   list-style: none;
 }
-nav ul a li{
-  margin: 0;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  float: left;
-  width: 33%;
-  text-align: center;
+nav ul li a{
+  
   background-color: #CCE3DE;
   color: #6B9080;
-transition: 0.7s;
+transition: 0.3s;
 text-decoration: none;
 }
 
-nav a li:hover{
-  background-color: #DBECE9;
+nav li a:hover{
+  color: #3a6955;
   cursor: pointer;
 }
 nav ul li{
+  height: 5%;
+  color: #6B9080;
+  text-align: center;
   background-color: #CCE3DE;
-  float: left;
+  float: right;
   width: 10%;
-  padding: 0;
 }
