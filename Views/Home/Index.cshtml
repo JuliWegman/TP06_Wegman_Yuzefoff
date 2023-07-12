@@ -1,4 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Index";
 }
+<div class="padre">
+@{
+    foreach (Partido a in ViewBag.listaPartidos){
+        <div class="Partido">
+          <h3>@a.Nombre</h3>
+          <img src="@a.Logo">
+          <p>Sitio Web: @a.SitioWeb</p>
+          <p>Fecha fundacion: @a.FechaFundacion</p>
+          <p>cantidad diputados: @a.CantidadDiputados</p>
+          <p>Cantidad senadores: @a.CantidadSenadores</p>
+          <a href='@Url.Action("VerDetallesPartido",new{idPar=@a.IdPartido})'>Ver detalles Partido</a>
+        </div>
+    }
+}
+</div>
 

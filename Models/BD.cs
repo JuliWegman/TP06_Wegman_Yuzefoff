@@ -26,12 +26,12 @@ class BD{
     }
     return elegido;
  }
-  public static Partido VerInfoCandidato(int idCan)
+  public static Candidato VerInfoCandidato(int idCan)
   {
-    Partido elegido=null;
+    Candidato elegido=null;
     string sql="SELECT * FROM Candidato WHERE idCandidato=@cidCandidato";
     using(SqlConnection BD=new SqlConnection(_connectionString)){
-        elegido=BD.QueryFirstOrDefault<Partido> (sql,new{cidCandidato=idCan});
+        elegido=BD.QueryFirstOrDefault<Candidato> (sql,new{cidCandidato=idCan});
     }
     return elegido;
   }

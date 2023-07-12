@@ -9,9 +9,6 @@
     <body>
         <header style="position:fixed; top: 0; margin: 10px 0px 20px 0px;">
         </header>
-        <div style="padding:20px 10px 0px 10px;">
-            @RenderBody()
-        </div>
         <nav class="navegador2">
             <ul>
                 <li><a href='@Url.Action("Index")'>Inicio</a></li>
@@ -19,6 +16,10 @@
                 <li><a href='@Url.Action("Creditos")'>creditos</a></li>
             </ul>
         </nav>
+        <div style="padding:20px 10px 0px 10px;">
+            @RenderBody()
+        </div>
+        
         <footer>
                 &copy; @DateTime.Now.Year - Taller de Programación - TP06
         </footer>

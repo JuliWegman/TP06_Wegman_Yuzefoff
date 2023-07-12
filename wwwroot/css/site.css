@@ -50,3 +50,21 @@ nav ul li{
   float: right;
   width: 10%;
 }
+.Partido{
+width: 30%;
+background-color: rgb(167, 163, 163);
+}
+.Partido img{
+  width:100%;
+}
+.padre{
+  display: flex;
+  justify-content: space-around;
+}
+.Candidato{
+  width: 15%;
+  background-color: rgb(167, 163, 163);
+  }
+  .Candidato img{
+    width:100%;
+  }

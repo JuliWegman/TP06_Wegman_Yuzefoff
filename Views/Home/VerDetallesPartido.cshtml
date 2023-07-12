@@ -1,0 +1,11 @@
+<div class="padre">
+@{
+    foreach (Candidato a in ViewBag.listaCandidatos){
+        <div class="Candidato">
+          <h2>@a.Nombre @a.Apellido</h2>
+          <img src="@a.Foto">
+          <a href='@Url.Action("VerDetallesCandidato",new {idCan=@a.idCandidato})'></a>
+        </div>
+    }
+}
+</div>
