@@ -1,10 +1,12 @@
 <div class="padre">
+<a href='@Url.Action("AgregarCandidato",new {idPar=ViewBag.datosPartido.IdPartido})'>Agregar candidato</a>
 @{
     foreach (Candidato a in ViewBag.listaCandidatos){
         <div class="Candidato">
-          <h2>@a.Nombre @a.Apellido</h2>
-          <img src="@a.Foto">
-          <a href='@Url.Action("VerDetallesCandidato",new {idCan=@a.idCandidato})'></a>
+          <h4>@a.Nombre @a.Apellido</h4>
+          <img src="@a.Foto" width="10%">
+          <a href='@Url.Action("VerDetallesCandidato",new {idCan=@a.idCandidato})'>Ver detalles</a>
+          <a href='@Url.Action("EliminarCandidato",new {idCan=@a.idCandidato, idPar=@a.idPartido})'>Eliminar</a>
         </div>
     }
 }

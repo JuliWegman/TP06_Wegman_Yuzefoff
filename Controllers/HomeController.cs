@@ -19,15 +19,16 @@ public class HomeController : Controller
         return View();
     }
     public IActionResult AgregarCandidato(int idPar){
+        ViewBag.idpar=idPar;
         return View();
     }
-    [HttpPost] IActionResult GuardarCandidato(Candidato can){
-        BD.AgregarCandidato(can);
-        return RedirectToAction("VerDetallesPartido");
+    public IActionResult GuardarCandidato(int idPar,string Apellido,string Nombre, DateTime fechaNacimiento,string foto, string postulacion){
+        BD.AgregarCandidato(new Candidato(1,idPar,Apellido,Nombre,fechaNacimiento,foto,postulacion));
+        return RedirectToAction("VerDetallesPartido",new {idPar=idPar});
     }
-    public IActionResult EliminarCandidato(int idCan){
+    public IActionResult EliminarCandidato(int idCan,int idPar){
         BD.EliminarCandidato(idCan);
-        return RedirectToAction("VerDetallesPartido");
+        return RedirectToAction("VerDetallesPartido",new {idPar=idPar});
     }
     public IActionResult Elecciones(){
         return View();

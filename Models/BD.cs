@@ -5,9 +5,10 @@ class BD{
  private static string _connectionString=@"Server=localhost;DataBase=Elecciones2023;Trusted_Connection=True;";
 
  public static void AgregarCandidato(Candidato can){
-    string sql="INSERT INTO Candidato(idPartido,Apellido,Nombre,FechaNacimiento,Foto,Postulacion) VALUES (@cidPartido,@cApellido,@cNombre,@cFoto,@cPostulacion)";
+    Console.WriteLine(can.idPartido);
+    string sql="INSERT INTO Candidato(idPartido,Apellido,Nombre,FechaNacimiento,Foto,Postulacion) VALUES (@cidPartido,@cApellido,@cNombre,@cFechaNacimiento,@cFoto,@cPostulacion)";
     using(SqlConnection BD=new SqlConnection(_connectionString)){
-        BD.Execute(sql,new{cidPartido=can.idPartido,cApellido=can.Apellido,cNombre=can.Nombre,cFoto=can.Foto,cPostulacion=can.Postulacion});
+        BD.Execute(sql,new{cidPartido=can.idPartido,cApellido=can.Apellido,cNombre=can.Nombre,cFechaNacimiento=can.FechaNacimiento,cFoto=can.Foto,cPostulacion=can.Postulacion});
     }
  }
  public static void EliminarCandidato(int idCan)
@@ -44,11 +45,11 @@ class BD{
     }
     return elegido;
   }
-  public static List<Partido> ListarCandidatos(int idPar){
-    List<Partido> elegido=null;
+  public static List<Candidato> ListarCandidatos(int idPar){
+    List<Candidato> elegido=null;
     string sql="SELECT * FROM Candidato WHERE idPartido=@cidPartido";
     using(SqlConnection BD=new SqlConnection(_connectionString)){
-        elegido=BD.Query<Partido>(sql,new{cidPartido=idPar}).ToList();
+        elegido=BD.Query<Candidato>(sql,new{cidPartido=idPar}).ToList();
     }
     return elegido;
   }
